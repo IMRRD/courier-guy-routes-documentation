@@ -1,30 +1,32 @@
-Example of shipmentid: 97044450
-
-
-
-# COURIER GUY – 
+# COURIER GUY – Get shipping Notes
 
 - You need to be logged inside of session-server to be able to test.
 
 ## Endpoint
 **GET**  
-`http://192.168.110.164:8823/`
+`http://192.168.110.164:8823/Shipping/GetNotes/{id}`
 
 ## Purpose
-
+Retrieves notes associated with a specific shipment.
+This endpoint is used to review operational, system, or user-added notes linked to the shipment for tracking and auditing purposes.
 
 ---
 
 ## Path Parameter
 | Parameter   | Description                      |
 |---------    |----------------------------------|
-| `` |  |
+| `id` |  ShipmentIdentifier |
+
 
 📥 Response Example:
 
-- Returns just a single invoice
+❌ No response example is currently available for this endpoint with our info on platform yet or have to find out a valid value
 
 ```json
+{
+    "shipment_notes": null,
+    "count": 0
+}
 ```
 
 ---

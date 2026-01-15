@@ -27,3 +27,12 @@ Postman Collection:
 
 - I have to attach the portal credentials here
 - Add swagger doc on all of the endpoints
+
+
+## Useful Info
+
+Example of trackingReference to use on project: FV4XVM
+
+To obtain the trackingReference, the value is initially provided when registering a shipment.
+After that, access the portal, open the shipment details, and locate the Tracking Ref. field.
+Use only the value that appears before the “/” character.

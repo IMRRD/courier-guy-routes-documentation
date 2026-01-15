@@ -1,4 +1,4 @@
-# COURIER GUY – 
+# COURIER GUY – Get an Account Statement
 
 - You need to be logged inside of session-server to be able to test.
 
@@ -7,14 +7,17 @@
 `http://192.168.110.164:8823/Billing/GetAnAccountStatement?start_date={start_date}&end_date={end_date}&pdf=true`
 
 ## Purpose
-
+Retrieves an account statement for the specified date range and, when requested, returns a secure URL to download the statement in PDF format or details.
+The statement is generated on demand based on existing billing data for reporting and reconciliation purposes.
 
 ---
 
 ## Path Parameter
 | Parameter   | Description                      |
 |---------    |----------------------------------|
-| `` |  |
+| `start_date` | Start date of the period to be considered when generating the account statement. |
+| `end_date` | End date of the period to be considered when generating the account statement. |
+| `pdf`  | Identifier to return the pdf path or false for the info |
 
 📥 Response Example:
 
@@ -33,6 +36,7 @@
 -- If pdf parameter on url is false, it returns:
 
 ```json
+ ❌ NOT IMPLEMENTED ENTIRELY YET
 ```
 
 ---

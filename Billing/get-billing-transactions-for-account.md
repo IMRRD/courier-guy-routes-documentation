@@ -1,24 +1,25 @@
-# COURIER GUY – 
+# COURIER GUY – Get Billing Transactions For Account
 
 - You need to be logged inside of session-server to be able to test.
 
 ## Endpoint
 **GET**  
-`http://192.168.110.164:8823/Billing/GetBillingTransactionsForAccount?order_by={order_by}&order={order}&limit={limit}&offset={offset}` // ARRUMAR COM {} ao inves de statico
+`http://192.168.110.164:8823/Billing/GetBillingTransactionsForAccount?order_by={order_by}&order={order}&limit={limit}&offset={offset}`
 
 ## Purpose
-
+Retrieves a paginated list of billing transactions associated with an account, allowing results to be sorted by a specified field and direction.
 
 ---
 
 ## Path Parameter
 | Parameter   | Description                      |
 |---------    |----------------------------------|
-| `` |  |
+| `order_by` | Field used to sort the billing transactions (e.g., transaction_date) |
+| `order` |  Sort direction. Accepted values are asc (ascending) or desc (descending). |
+| `limit` |  Maximum number of transactions to return per request. Used for pagination. |
+| `offset` | Number of transactions to skip before starting to return results. Used for pagination. |
 
 📥 Response Example:
-
-- Returns just a single invoice
 
 ```json
 {

@@ -1,16 +1,11 @@
-# COURIER GUY – 
+# COURIER GUY – Submit Rate
 
 ## Endpoint
-POST /rates
+**POST**  
+`http://192.168.110.164:8823/Rate/SubmitRate`
 
 ## Purpose
 This endpoint is used to retrieve shipping rate quotations based on pickup and delivery locations, parcel dimensions, weight, and the selected logistics provider. After submitting the request, the system validates the shipment data, calculates chargeable weight, applies provider pricing rules, and returns one or more calculated rate options. This endpoint does not create shipments and does not schedule collections. It only returns rate quotations.
-
-## Typical Use Cases
-This endpoint is typically used to display available shipping options to end users, compare delivery times and prices, validate shipping costs before shipment creation, and perform integration or automated testing scenarios.
-
-## Request Overview
-The request represents a shipping scenario including the logistics provider, collection address, delivery address, and one or more parcels with submitted dimensions and weight. The pricing calculation considers both actual and volumetric weight and applies provider-specific rules to determine the final charged weight.
 
 ## Request Example
 
@@ -48,9 +43,6 @@ The request represents a shipping scenario including the logistics provider, col
   }
 
 ```
-
-## Response Overview
-A successful response returns an operation status, optional service day information, and a list of calculated rates, each representing a possible shipping service. Each rate includes pricing information, service level details, delivery and collection estimates, and the weight calculation used for charging.
 
 ## Response Example
 ```json
@@ -240,23 +232,6 @@ A successful response returns an operation status, optional service day informat
 }
 
 ```
-
-## Rates
-Each item in the rates array represents a shipping option. Rates may vary by service speed such as Same Day, Overnight, Economy, or Express, by cut-off times, by delivery windows, and by pricing model such as flat or formula-based. Multiple rates can be returned for the same request.
-
-## Pricing and Weight Calculation
-The final rate is calculated based on the actual weight, volumetric weight, and charged weight, which is the highest value between actual and volumetric weight, combined with the base rate and applicable VAT and tax rules. Returned values may include the total rate including VAT, the rate excluding VAT, and the VAT amount and percentage.
-
-## Service Levels
-Each rate contains a service level defining the delivery type, estimated collection and delivery dates, cut-off times, and insurance availability. Service availability depends on address data, parcel details, and provider configuration.
-
-## Success Criteria
-A request is considered successful when the message equals "Success", the rates array contains at least one item, and each rate includes a valid service level and calculated price.
-
-## Notes for Testers
-Missing service day values do not indicate an error. Prices may vary depending on request time and service cut-off rules. VAT rules depend on provider configuration. This endpoint returns quotations only and does not confirm or create deliveries.
-Rates calculated via the rates endpoint are not visible in the portal. Only shipments created via this endpoint are persisted and displayed. If a shipment is not visible in the portal, it means the shipment was not successfully created.
-
 
 ℹ️ ⚠️ *Click the link below to learn more about the information related to this specific call (route).*
 

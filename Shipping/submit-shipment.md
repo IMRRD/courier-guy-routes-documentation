@@ -1,22 +1,12 @@
-# COURIER GUY – 
+# COURIER GUY – Submit Shipping
 
 ## Endpoint
-POST /shipments
+**POST**  
+`http://192.168.110.164:8823/Shipping/Submit`
 
 ## Purpose
 This endpoint is used to create a shipment in the logistics system. A shipment represents a confirmed delivery request and includes collection details, delivery details, parcel information, and the selected service level.
 
-Once a shipment is successfully created, it becomes a persistent entity in the system and can be tracked, managed, and viewed in the logistics portal.
-
-This endpoint is used after rates have been calculated and a service option has been selected.
-
-## Typical Use Cases
-This endpoint is typically used to create a confirmed shipment after a customer selects a shipping option, to schedule collections and deliveries, to generate trackable shipment records, and to persist delivery data for operational and reporting purposes.
-
-## Request Overview
-The request represents a confirmed shipment and includes the logistics provider, collection and delivery addresses, parcel details, and the selected service level obtained from a prior rate calculation.
-
-Unlike rate requests, shipment creation persists data and triggers operational workflows such as collection scheduling and delivery processing.
 
 ## Request Example
 
@@ -84,18 +74,6 @@ Unlike rate requests, shipment creation persists data and triggers operational w
 }
 
 ```
-
-## Shipment Creation Behavior
-When a shipment is created:
-- The shipment is stored in the system
-- A shipment identifier is generated
-- The shipment becomes visible in the logistics portal
-- Operational processes such as collection and delivery can be initiated
-
-This endpoint creates a real shipment, not a quotation.
-
-## Response Overview
-A successful response returns confirmation that the shipment was created along with shipment identifiers and status information. These identifiers can be used for tracking, updates, and support queries.
 
 ## Response Example
 
@@ -397,21 +375,6 @@ A successful response returns confirmation that the shipment was created along w
 }
 
 ```
-
-## Success Criteria
-A request is considered successful when the API returns a success response and a shipment identifier is generated. Once successful, the shipment exists as a persistent record in the system.
-
-## Portal Visibility
-All successfully created shipments can be viewed and managed in the logistics portal.
-
-Shipments created through this API will appear in the portal at:
-https://sandbox.shiplogic.com/shipments
-
-Access to the portal will be provided separately.
-
-## Notes for Testers
-Rates calculated via the rates endpoint are not visible in the portal. Only shipments created via this endpoint are persisted and displayed. If a shipment is not visible in the portal, it means the shipment was not successfully created.
-
 
 ℹ️ ⚠️ *Click the link below to learn more about the information related to this specific call (route).*
 

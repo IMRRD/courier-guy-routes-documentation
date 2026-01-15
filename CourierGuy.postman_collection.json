@@ -21,12 +21,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Tracking/GetShipmentPodImageDownloadUrls?file_name=string&folder=aa",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Tracking/GetShipmentPodImageDownloadUrls?file_name=string&folder=aa",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Tracking",
 								"GetShipmentPodImageDownloadUrls"
@@ -56,12 +54,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Tracking/TrackShipments?trackingReference=FV4XVM",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Tracking/TrackShipments?trackingReference=FV4XVM",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Tracking",
 								"TrackShipments"
@@ -87,12 +83,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Tracking/GetShipmentPodImages?trackingReference=6GV87C&includeDigitalPod=false",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Tracking/GetShipmentPodImages?trackingReference=6GV87C&includeDigitalPod=false",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Tracking",
 								"GetShipmentPodImages"
@@ -122,12 +116,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Tracking/GetAllPodEventsForAShipment?trackingReference=FV4XVM&includeDigitalPod=true",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Tracking/GetAllPodEventsForAShipment?trackingReference=FV4XVM&includeDigitalPod=true",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Tracking",
 								"GetAllPodEventsForAShipment"
@@ -157,12 +149,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Tracking/GetADigitalPodForAShipmnent?trackingReference=FV4XVM",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Tracking/GetADigitalPodForAShipmnent?trackingReference=FV4XVM",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Tracking",
 								"GetADigitalPodForAShipmnent"
@@ -206,14 +196,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5196/Shipment/Submit",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Shipping/Submit",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
-								"Shipment",
+								"Shipping",
 								"Submit"
 							]
 						}
@@ -231,14 +219,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Shipment/GetNotes/97389223",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Shipping/GetNotes/97389223",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
-								"Shipment",
+								"Shipping",
 								"GetNotes",
 								"97389223"
 							]
@@ -257,14 +243,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Shipment/GetShipmentsByTrackingReference?trackingReference=FV4XVM",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Shipping/GetShipmentsByTrackingReference?trackingReference=FV4XVM",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
-								"Shipment",
+								"Shipping",
 								"GetShipmentsByTrackingReference"
 							],
 							"query": [
@@ -288,14 +272,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Shipment/GetShipmentLabelUrl?id=97389223",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Shipping/GetShipmentLabelUrl?id=97389223",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
-								"Shipment",
+								"Shipping",
 								"GetShipmentLabelUrl"
 							],
 							"query": [
@@ -319,14 +301,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Shipment/GetShipmentStickerLabelUrl?id=97389223",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Shipping/GetShipmentStickerLabelUrl?id=97389223",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
-								"Shipment",
+								"Shipping",
 								"GetShipmentStickerLabelUrl"
 							],
 							"query": [
@@ -363,14 +343,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5196/Shipment/CancelShipment",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Shipping/CancelShipment",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
-								"Shipment",
+								"Shipping",
 								"CancelShipment"
 							]
 						}
@@ -406,12 +384,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5196/Rate/SubmitRate",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Rate/SubmitRate",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Rate",
 								"SubmitRate"
@@ -444,12 +420,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5196/Rate/SubmitOptInRate",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Rate/SubmitOptInRate",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Rate",
 								"SubmitOptInRate"
@@ -474,12 +448,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Billing/GetAnAccountStatement?start_date=2025-11-01&end_date=2026-11-01",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Billing/GetAnAccountStatement?start_date=2025-11-01&end_date=2026-11-01",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Billing",
 								"GetAnAccountStatement"
@@ -509,12 +481,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Billing/GetCreditNotes?start_date=2025-11-01&end_date=2026-11-01",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Billing/GetCreditNotes?start_date=2025-11-01&end_date=2026-11-01",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Billing",
 								"GetCreditNotes"
@@ -544,12 +514,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Billing/GetItemsForCreditNote?credit_note_id=1",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Billing/GetItemsForCreditNote?credit_note_id=1",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Billing",
 								"GetItemsForCreditNote"
@@ -575,12 +543,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Billing/GetInvoices?start_date=2025-11-01&end_date=2026-11-01",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Billing/GetInvoices?start_date=2025-11-01&end_date=2026-11-01",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Billing",
 								"GetInvoices"
@@ -610,12 +576,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Billing/GetItemsForInvoice?invoice_id=1&order_by=transaction_date&order=ASC",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Billing/GetItemsForInvoice?invoice_id=1&order_by=transaction_date&order=ASC",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Billing",
 								"GetItemsForInvoice"
@@ -649,12 +613,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5196/Billing/GetBillingTransactionsForAccount?order_by=transaction_date&order=asc&limit=1&offset=0",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/Billing/GetBillingTransactionsForAccount?order_by=transaction_date&order=asc&limit=1&offset=0",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5196",
 							"path": [
 								"Billing",
 								"GetBillingTransactionsForAccount"
@@ -682,6 +644,36 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://192.168.110.164:8823"
 		}
 	]
 }

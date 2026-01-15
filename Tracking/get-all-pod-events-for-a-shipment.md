@@ -1,14 +1,14 @@
-# COURIER GUY – Get Shipment Pod Images
+# COURIER GUY – Get All Pod Events For A Shipment
 
 - You need to be logged inside of session-server to be able to test.
 
 ## Endpoint
 **GET**  
-`http://192.168.110.164:8823/Tracking/GetShipmentPodImages?trackingReference={tracking_reference}&includeDigitalPod=true`
+`http://192.168.110.164:8823/Tracking/GetAllPodEventsForAShipment?trackingReference={tracking_reference}&includeDigitalPod=true`
 
 ## Purpose
-Retrieves Proof of Delivery (POD) images associated with a specific shipment, with optional inclusion of digital POD data.
-This endpoint is used to access visual delivery confirmation assets for verification, auditing, and customer support purposes.
+Retrieves all Proof of Delivery (POD) events associated with a specific shipment, with optional inclusion of digital POD details.
+This endpoint is used to review the full delivery confirmation history and validate POD-related events for tracking and auditing purposes.
 
 ---
 
@@ -29,4 +29,4 @@ This endpoint is used to access visual delivery confirmation assets for verifica
 
 ℹ️ ⚠️ *Click the link below to learn more about the information related to this specific call (route).*
 
-https://www.shiplogic.com/api-docs/get-getting-pod-images-for-a-shipment
+https://www.shiplogic.com/api-docs/get-getting-all-pod-events-for-a-shipment
