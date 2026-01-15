@@ -1,4 +1,4 @@
-# Shipping Rates API – Create Rate Request
+# COURIER GUY – 
 
 ## Endpoint
 POST /rates
@@ -256,3 +256,8 @@ A request is considered successful when the message equals "Success", the rates 
 ## Notes for Testers
 Missing service day values do not indicate an error. Prices may vary depending on request time and service cut-off rules. VAT rules depend on provider configuration. This endpoint returns quotations only and does not confirm or create deliveries.
 Rates calculated via the rates endpoint are not visible in the portal. Only shipments created via this endpoint are persisted and displayed. If a shipment is not visible in the portal, it means the shipment was not successfully created.
+
+
+ℹ️ ⚠️ *Click the link below to learn more about the information related to this specific call (route).*
+
+https://www.shiplogic.com/api-docs/post-getting-rates

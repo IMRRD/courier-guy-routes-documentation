@@ -1,4 +1,4 @@
-# Shipping API – Create Shipment
+# COURIER GUY – 
 
 ## Endpoint
 POST /shipments
@@ -411,3 +411,8 @@ Access to the portal will be provided separately.
 
 ## Notes for Testers
 Rates calculated via the rates endpoint are not visible in the portal. Only shipments created via this endpoint are persisted and displayed. If a shipment is not visible in the portal, it means the shipment was not successfully created.
+
+
+ℹ️ ⚠️ *Click the link below to learn more about the information related to this specific call (route).*
+
+https://www.shiplogic.com/api-docs/post-create-a-shipment

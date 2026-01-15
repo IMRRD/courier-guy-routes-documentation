@@ -1,0 +1,687 @@
+{
+	"info": {
+		"_postman_id": "2a534356-a8cc-4c03-9294-476c9ec3eedf",
+		"name": "CourierGuy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18474824",
+		"_collection_link": "https://warped-flare-656313.postman.co/workspace/IAL~046dca66-f98f-477b-bcc6-120d518f6c1e/collection/18474824-2a534356-a8cc-4c03-9294-476c9ec3eedf?action=share&source=collection_link&creator=18474824"
+	},
+	"item": [
+		{
+			"name": "Tracking",
+			"item": [
+				{
+					"name": "GetShipmentPodImageDownloadUrlsAsync",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Tracking/GetShipmentPodImageDownloadUrls?file_name=string&folder=aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Tracking",
+								"GetShipmentPodImageDownloadUrls"
+							],
+							"query": [
+								{
+									"key": "file_name",
+									"value": "string"
+								},
+								{
+									"key": "folder",
+									"value": "aa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TrackShipments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Tracking/TrackShipments?trackingReference=FV4XVM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Tracking",
+								"TrackShipments"
+							],
+							"query": [
+								{
+									"key": "trackingReference",
+									"value": "FV4XVM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetShipmentPodImages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Tracking/GetShipmentPodImages?trackingReference=6GV87C&includeDigitalPod=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Tracking",
+								"GetShipmentPodImages"
+							],
+							"query": [
+								{
+									"key": "trackingReference",
+									"value": "6GV87C"
+								},
+								{
+									"key": "includeDigitalPod",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllPodEventsForAShipment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Tracking/GetAllPodEventsForAShipment?trackingReference=FV4XVM&includeDigitalPod=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Tracking",
+								"GetAllPodEventsForAShipment"
+							],
+							"query": [
+								{
+									"key": "trackingReference",
+									"value": "FV4XVM"
+								},
+								{
+									"key": "includeDigitalPod",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetADigitalPodForAShipmnent",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Tracking/GetADigitalPodForAShipmnent?trackingReference=FV4XVM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Tracking",
+								"GetADigitalPodForAShipmnent"
+							],
+							"query": [
+								{
+									"key": "trackingReference",
+									"value": "FV4XVM"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shipping",
+			"item": [
+				{
+					"name": "Submit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"collection_address\": {\n        \"type\": \"business\",\n        \"company\": \"Shiplogic\",\n        \"street_address\": \"194 Bancor Avenue\",\n        \"local_area\": \"Menlyn\",\n        \"city\": \"Pretoria\",\n        \"zone\": \"Gauteng\",\n        \"country\": \"ZA\",\n        \"code\": \"0181\"\n    },\n    \"collection_contact\": {\n        \"name\": \"Cornel Rautenbach\",\n        \"mobile_number\": \"\",\n        \"email\": \"cornel+sandy@shiplogic.com\"\n    },\n    \"delivery_address\": {\n        \"type\": \"residential\",\n        \"company\": \"\",\n        \"street_address\": \"10 Midas Ave\",\n        \"local_area\": \"Olympus AH\",\n        \"city\": \"Pretoria\",\n        \"code\": \"0081\",\n        \"zone\": \"Gauteng\",\n        \"country\": \"ZA\",\n        \"lat\": -25.80665579999999,\n        \"lng\": 28.334732\n    },\n    \"delivery_contact\": {\n        \"name\": \"\",\n        \"mobile_number\": \"\",\n        \"email\": \"james+sandyreceiver@shiplogic.com\"\n    },\n    \"parcels\": [\n        {\n            \"parcel_description\": \"Standard flyer\",\n            \"submitted_length_cm\": 20,\n            \"submitted_width_cm\": 20,\n            \"submitted_height_cm\": 10,\n            \"submitted_weight_kg\": 2\n        }\n    ],\n    \"opt_in_rates\": [],\n    \"opt_in_time_based_rates\": [\n        76\n    ],\n    \"special_instructions_collection\": \"This is a test shipment - DO NOT COLLECT\",\n    \"special_instructions_delivery\": \"This is a test shipment - DO NOT DELIVER\",\n    \"declared_value\": 1100,\n    \"collection_min_date\": \"2021-05-21T00:00:00.000Z\",\n    \"collection_after\": \"08:00\",\n    \"collection_before\": \"16:00\",\n    \"delivery_min_date\": \"2021-05-21T00:00:00.000Z\",\n    \"delivery_after\": \"10:00\",\n    \"delivery_before\": \"17:00\",\n    \"custom_tracking_reference\": \"\",\n    \"customer_reference\": \"ORDERNO123\",\n    \"service_level_code\": \"ECO\",\n    \"mute_notifications\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5196/Shipment/Submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Shipment",
+								"Submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNotes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Shipment/GetNotes/97389223",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Shipment",
+								"GetNotes",
+								"97389223"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetShipmentsByTrackingReference",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Shipment/GetShipmentsByTrackingReference?trackingReference=FV4XVM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Shipment",
+								"GetShipmentsByTrackingReference"
+							],
+							"query": [
+								{
+									"key": "trackingReference",
+									"value": "FV4XVM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetShipmentLabelUrl",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Shipment/GetShipmentLabelUrl?id=97389223",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Shipment",
+								"GetShipmentLabelUrl"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "97389223"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetShipmentStickerLabelUrl",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Shipment/GetShipmentStickerLabelUrl?id=97389223",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Shipment",
+								"GetShipmentStickerLabelUrl"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "97389223"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CancelShipment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"tracking_reference\": \"invalid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5196/Shipment/CancelShipment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Shipment",
+								"CancelShipment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rates",
+			"item": [
+				{
+					"name": "SubmitRate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"provider_id\": 1,\n    \"collection_address\": {\n      \"type\": \"business\",\n      \"street_address\": \"116 Lois Avenue\",\n      \"local_area\": \"Menlyn\",\n      \"city\": \"Pretoria\",\n      \"zone\": \"Gauteng\",\n      \"country\": \"ZA\",\n      \"code\": \"0181\"\n    },\n    \"delivery_address\": {\n      \"type\": \"residential\",\n      \"street_address\": \"10 Midas Avenue\",\n      \"local_area\": \"Olympus AH\",\n      \"city\": \"Pretoria\",\n      \"zone\": \"Gauteng\",\n      \"country\": \"ZA\",\n      \"code\": \"0081\"\n    },\n    \"parcels\": [\n      {\n        \"packaging\": \"Box 1\",\n        \"parcel_description\": \"Box 1\",\n        \"submitted_length_cm\": 20,\n        \"submitted_width_cm\": 20,\n        \"submitted_height_cm\": 10,\n        \"submitted_weight_kg\": 2\n      }\n    ]\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5196/Rate/SubmitRate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Rate",
+								"SubmitRate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SubmitOptInRate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"collection_address\": {\n        \"type\": \"business\",\n        \"company\": \"Shiplogic\",\n        \"street_address\": \"194 Bancor Avenue\",\n        \"local_area\": \"Menlyn\",\n        \"city\": \"Pretoria\",\n        \"zone\": \"Gauteng\",\n        \"country\": \"ZA\",\n        \"code\": \"0181\"\n    },\n    \"delivery_address\": {\n        \"type\": \"residential\",\n        \"company\": \"\",\n        \"street_address\": \"10 Midas Avenue\",\n        \"local_area\": \"Olympus AH\",\n        \"city\": \"Pretoria\",\n        \"zone\": \"Gauteng\",\n        \"country\": \"ZA\",\n        \"code\": \"0081\",\n        \"lat\": -25.80665579999999,\n        \"lng\": 28.334732\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5196/Rate/SubmitOptInRate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Rate",
+								"SubmitOptInRate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Billing",
+			"item": [
+				{
+					"name": "GetAnAccountStatement",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Billing/GetAnAccountStatement?start_date=2025-11-01&end_date=2026-11-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Billing",
+								"GetAnAccountStatement"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2025-11-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2026-11-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCreditNotes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Billing/GetCreditNotes?start_date=2025-11-01&end_date=2026-11-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Billing",
+								"GetCreditNotes"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2025-11-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2026-11-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetItemsForCreditNote",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Billing/GetItemsForCreditNote?credit_note_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Billing",
+								"GetItemsForCreditNote"
+							],
+							"query": [
+								{
+									"key": "credit_note_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInvoices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Billing/GetInvoices?start_date=2025-11-01&end_date=2026-11-01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Billing",
+								"GetInvoices"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2025-11-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2026-11-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetItemsForInvoice",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Billing/GetItemsForInvoice?invoice_id=1&order_by=transaction_date&order=ASC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Billing",
+								"GetItemsForInvoice"
+							],
+							"query": [
+								{
+									"key": "invoice_id",
+									"value": "1"
+								},
+								{
+									"key": "order_by",
+									"value": "transaction_date"
+								},
+								{
+									"key": "order",
+									"value": "ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBillingTransactionsForAccount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5196/Billing/GetBillingTransactionsForAccount?order_by=transaction_date&order=asc&limit=1&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5196",
+							"path": [
+								"Billing",
+								"GetBillingTransactionsForAccount"
+							],
+							"query": [
+								{
+									"key": "order_by",
+									"value": "transaction_date"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
