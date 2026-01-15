@@ -5,7 +5,7 @@ Postman Collection:
 
 ## 📥 Download configuration file
 
-👉 [Click here to download the JSON file](https://github.com/IMRRD/courier-guy-routes-documentation/CourierGuy.postman_collection.json)
+👉 [Click here to download the JSON file](https://github.com/IMRRD/courier-guy-routes-documentation/blob/main/CourierGuy.postman_collection.json)
 
 
 - I have to attach the portal credentials here
